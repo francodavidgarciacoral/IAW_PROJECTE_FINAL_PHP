@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroVault - Santuario del Gaming</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Landing Page Specific Overrides */
+        body {
+            padding-top: 0;
+            /* Reset for full screen hero */
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, var(--bg-color) 100%);
+            pointer-events: none;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            z-index: 10;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-weight: 300;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            z-index: 10;
+        }
+
+        .cta-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            border: none;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--neon-purple);
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            color: var(--neon-blue);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .feature-text {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1 class="hero-title">RETROVAULT</h1>
+        <p class="hero-subtitle">RetroVault: Explora la historia del videojuego y gestiona tu inventario personal.</p>
+
+        <div class="cta-container">
+            <a href="login.php" class="btn btn-primary cta-btn">Entrar al Búnker</a>
+            <a href="catalog.php" class="btn cta-btn"
+                style="border: 2px solid var(--neon-purple); color: var(--text-main);">Explorar Catálogo</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>¿QUÉ HACEMOS?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <span class="feature-icon">📚</span>
+                <h3 class="feature-title">Organiza tu Colección</h3>
+                <p class="feature-text">Lleva un registro detallado de tus joyas. Marca qué juegos tienes, su estado y
+                    tu valoración personal. Tu museo digital, siempre contigo.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🔍</span>
+                <h3 class="feature-title">Descubre Joyas</h3>
+                <p class="feature-text">Explora nuestro vasto catálogo de títulos legendarios de NES, SNES, PlayStation
+                    y más. Encuentra ese juego que olvidaste.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">💾</span>
+                <h3 class="feature-title">Preserva la Historia</h3>
+                <p class="feature-text">Únete a una comunidad de coleccionistas dedicados a mantener vivo el legado de
+                    los videojuegos. El pasado nunca muere.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="text-align: center; padding: 40px; color: var(--text-muted); border-top: 1px solid #334155; background: var(--card-bg);">
+        <p>&copy; 2026 RetroVault. Hecho con 👾 y 🕹️.</p>
+    </footer>
+
+</body>
+
+</html>
